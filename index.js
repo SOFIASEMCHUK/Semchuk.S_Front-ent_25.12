@@ -11,11 +11,11 @@ function culc(arr) {
   console.log(num);
 }
 
-const num1 = +prompt('Enter numner 1');
-const num2 = +prompt('Enter number 2');
-const operator = prompt('Enter operator: + - * /');
-
 //2
+const num1 = +prompt('Enter number 1(task 2)');
+const num2 = +prompt('Enter number 2(task 2)');
+const operator = prompt('Enter operator: + - * / (task 2)');
+
 doMath(num1, num2, operator);
 function doMath(num1, num2, operator) {
   switch (operator) {
@@ -35,3 +35,20 @@ function doMath(num1, num2, operator) {
       break;
   }
 }
+
+//3
+const horizontal = +prompt('Введіть довжину зовнішнього масиву (task 3)');
+const vertical = +prompt('Введіть довжину внутрішнього масиву (task 3)');
+const arr2 = [];
+
+arrDouble(horizontal, vertical, arr2);
+function arrDouble(horizontal, vertical, arr2) {
+  for (let m = 0; m < vertical; m++) {
+    arr2[m] = [];
+    for (let n = 0; n < horizontal; n++) {
+      arr2[m][n] = prompt(`Enter ${n} element ${m} line`);
+    }
+  }
+}
+console.log(arr2);
+
