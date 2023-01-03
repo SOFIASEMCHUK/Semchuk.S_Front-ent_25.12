@@ -52,3 +52,19 @@ function arrDouble(horizontal, vertical, arr2) {
 }
 console.log(arr2);
 
+//4
+const line = prompt('Enter string (task 4)');
+const remove = prompt('Enter the simvole(-s) you want to delete (task 4)');
+
+deleteSimvole(line, remove);
+function deleteSimvole(line, remove) {
+  line = line.split('');
+  for (let i = 0; i < line.length; i++) {
+    for (let j = 0; j < line.length; j++) {
+      if (line[i] === remove[j] && line[i] !== ' ') {
+        line[i] = '';
+      }
+    }
+  }
+  console.log(line.join(''));
+}
