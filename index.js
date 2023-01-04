@@ -1,6 +1,6 @@
 //1
 const arr = [5, 66, 'pool', 7, 99, null, { name: 'Sam' }, [], true, 78];
-culc(arr);
+
 function culc(arr) {
   let num = 0;
   for (let item of arr) {
@@ -11,12 +11,12 @@ function culc(arr) {
   console.log(num);
 }
 
+culc(arr);
 //2
 const num1 = +prompt('Enter number 1(task 2)');
 const num2 = +prompt('Enter number 2(task 2)');
 const operator = prompt('Enter operator: + - * / (task 2)');
 
-doMath(num1, num2, operator);
 function doMath(num1, num2, operator) {
   switch (operator) {
     case '+':
@@ -35,13 +35,13 @@ function doMath(num1, num2, operator) {
       break;
   }
 }
+doMath(num1, num2, operator);
 
 //3
 const horizontal = +prompt('Введіть довжину зовнішнього масиву (task 3)');
 const vertical = +prompt('Введіть довжину внутрішнього масиву (task 3)');
 const arr2 = [];
 
-arrDouble(horizontal, vertical, arr2);
 function arrDouble(horizontal, vertical, arr2) {
   for (let m = 0; m < vertical; m++) {
     arr2[m] = [];
@@ -50,13 +50,13 @@ function arrDouble(horizontal, vertical, arr2) {
     }
   }
 }
+arrDouble(horizontal, vertical, arr2);
 console.log(arr2);
 
 //4
 const line = prompt('Enter string (task 4)');
 const remove = prompt('Enter the simvole(-s) you want to delete (task 4)');
 
-deleteSimvole(line, remove);
 function deleteSimvole(line, remove) {
   line = line.split('');
   for (let i = 0; i < line.length; i++) {
@@ -68,3 +68,4 @@ function deleteSimvole(line, remove) {
   }
   console.log(line.join(''));
 }
+deleteSimvole(line, remove);
